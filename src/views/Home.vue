@@ -1,12 +1,26 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import GroupPhoto from './components/GroupPhoto';
+import BossArrange from './components/BossArrange';
+
+const active = ref();
 </script>
 
 <template>
     <div class="home">
-        <div class="name">
-            <img src="../assets/name.png" alt="" />
-        </div>
-        <div class="img" />
+        <van-tabs v-model:active="active">
+            <van-tab title="公会介绍">
+                <div class="production"></div>
+            </van-tab>
+            <van-tab title="副本安排">
+                <BossArrange />
+            </van-tab>
+            <van-tab title="公会合照">
+                <div class="group-photo">
+                    <GroupPhoto />
+                </div>
+            </van-tab>
+        </van-tabs>
     </div>
 </template>
 
@@ -14,22 +28,12 @@
 .home {
     width: 100%;
     height: 100%;
-    background: #000;
-    color: #fff;
-    position: relative;
 
-    .img {
-        background: url('../assets/img_1.png') no-repeat center center;
-        background-size: cover;
+    .group-photo {
         width: 100%;
         height: 100%;
-    }
-
-    .name {
-        position: absolute;
-        left: 50%;
-        top: 50px;
-        transform: translateX(-50%) scale(0.5);
+        padding: 12px;
+        box-sizing: border-box;
     }
 }
 </style>
