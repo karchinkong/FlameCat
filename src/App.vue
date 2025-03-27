@@ -1,7 +1,9 @@
 <template>
-    <div class="container">
-        <router-view />
-    </div>
+    <van-config-provider theme="dark">
+        <div class="container">
+            <router-view />
+        </div>
+    </van-config-provider>
 </template>
 
 <script setup lang="ts">
