@@ -13,6 +13,7 @@ declare module 'vue' {
     VanCollapse: typeof import('vant/es')['Collapse']
     VanCollapseItem: typeof import('vant/es')['CollapseItem']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
+    VanEmpty: typeof import('vant/es')['Empty']
     VanImage: typeof import('vant/es')['Image']
     VanSwipe: typeof import('vant/es')['Swipe']
     VanSwipeItem: typeof import('vant/es')['SwipeItem']

@@ -10,7 +10,9 @@ const active = ref();
     <div class="home">
         <van-tabs v-model:active="active">
             <van-tab title="公会介绍">
-                <div class="production"></div>
+                <div class="production">
+                    <van-empty image="error" description="暂无介绍" />
+                </div>
             </van-tab>
             <van-tab title="副本安排">
                 <BossArrange />
@@ -28,6 +30,10 @@ const active = ref();
 .home {
     width: 100%;
     height: 100%;
+
+    .production {
+        padding-top: 100px;
+    }
 
     .group-photo {
         width: 100%;
